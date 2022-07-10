@@ -60,7 +60,7 @@ def inputAbout(request):
             to = 'ikv1980@gmail.com'
             send_mail(f'{subject} от {from_email}', plain_message, from_email, [to])
             form.save()
-            messages.success(request, f'Письмо отправлено')
+            messages.success(request, f'Письмо от {from_email} успешно отправлено')
             return redirect('password_reset_done')
     else:
         form = AboutForm()
