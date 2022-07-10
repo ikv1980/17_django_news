@@ -1,0 +1,27 @@
+{% extends 'home/base.html' %} 
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block topic %}
+    <h1 class="pt-4 fw-semybold text-dark fs-1 pb-2 align-self-center">
+        {{ topic }}
+    </h1>
+{% endblock %}
+
+
+{% block content  %}
+    <div class="d-md-flex justify-content-lg-center  text-dark mb-5 py-5 px-lg-5 text-center">
+        {% for i in points %}
+        
+        <div class="card d-flex p-2 m-2 alert alert-dark">
+            <div class="card-header">
+                <p class="fw-bold h3">{{ i.title }}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">{{ i.textfield }}</li>
+            </ul>
+        </div>
+
+        {% endfor%}
+    </div>
+{% endblock %}

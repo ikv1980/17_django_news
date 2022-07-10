@@ -1,0 +1,10 @@
+{% extends 'home/base.html' %} 
+
+{% block title %} Вы успешно вышли с аккаунта {% endblock %}
+
+{% block topic %}
+    <h1 class="pt-4 fw-semybold text-dark fs-1 pb-2 align-self-center">
+        Вы успешно вышли с аккаунта
+    </h1>
+    <a href="{% url 'user' %}">Войти в личный кабинет снова</a>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'home/base.html' %} 
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block topic %}
+    <div class="container">
+        <h1 class="pt-4 fw-semybold text-dark fs-1 pb-2 align-self-center">
+        Немного о нас
+        </h1>
+        <h5> Мы уже более 10 лет занимаемся всем подряд. Делаем то и это, а так же то самое. Продукция, выпускаемая под нашей торговой маркой «NoName», проходит инспекцию по контролю качества, что гарантирует нашим клиентам надежность и долговечность поставляемого продукта. Качество, прочность, долговечность, уникальность и неадекватность цен — одни из главных причин, по которым выбирают именно нашу компанию.
+        </h5>
+    </div>
+
+{% endblock %}
+
+
+{% block content  %}
+    <div class="container col-10 col-sm-8 col-lg-6 col-xl-4 justify-content-center align-items-center text-center">
+        <div class="fs-5 alert alert-primary">А тут напишите нам письмо с вопросом</div>
+        <form method="post" class="form-register cont" autocomplete="off">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-warning" type="submit">Отправить письмо</button>
+        </form>
+    </div>
+{% endblock %}

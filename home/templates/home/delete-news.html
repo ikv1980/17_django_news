@@ -1,0 +1,22 @@
+{% extends 'home/base.html' %} 
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block topic %}
+    <h1 class="pt-4 fw-semybold text-dark fs-1 pb-2 align-self-center">
+        {{ title }}
+    </h1>
+    <h4 class="text-danger">Вы точно хотите удалить статью "{{ object.title }}"?</h4>
+{% endblock %}
+
+
+{% block content %}
+    <div class="container col-10">
+        <form method="post" class="form-register delete" autocomplete="off">
+            {% csrf_token %}
+            <button class="btn btn-danger" type="submit">{{ btn_text }} </button>
+            <a class="d-xs-block fs-5 p-3 " href="{% url 'news-detail' object.id %}">Нет, отмена</a>
+        </form>
+    </div>
+{% endblock %}
+

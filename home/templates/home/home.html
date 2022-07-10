@@ -1,0 +1,17 @@
+{% extends 'home/base.html' %} 
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block topic %}
+    <h1 class="pt-4 fw-semybold text-dark fs-1 pb-2 align-self-center">
+        {{ topic }}
+    </h1>
+{% endblock %}
+
+{% block content %}
+    <p class="fs-3">Делаем работу быстро и качественно</p>
+    <div class="block">
+        <a class="btn btn-danger mt-5 px-4 py-3" href="{% url 'uslugi' %}">Посмотреть услуги</a>
+    </div>
+
+{% endblock %}

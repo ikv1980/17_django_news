@@ -1,0 +1,21 @@
+{% extends 'home/base.html' %} 
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block topic %}
+    <h1 class="pt-4 fw-semybold text-dark fs-1 pb-2 align-self-center">
+        {{ title }}
+    </h1>
+{% endblock %}
+
+
+{% block content %}
+    <div class="container col-10">
+        <form method="post" class="form-register create" autocomplete="off">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-warning" type="submit">{{ btn_text }} </button>
+        </form>
+    </div>
+{% endblock %}
+

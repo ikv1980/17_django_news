@@ -1,0 +1,165 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+main {
+    margin: 0 auto 100px;
+}
+
+footer {
+    background: #212529;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+  }
+
+  .logo {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .ico {
+    width: 38px;
+  }
+
+  textarea {
+    /* resize: none !important; */
+    height: 300px;
+  }
+
+  .cont p textarea {
+    resize: none !important;
+    height: 150px;  
+  }
+
+  .form-register p input {
+    max-height: 45px;
+  }
+
+  .hov:hover {
+    color: yellow !important;
+    transition: all .2s ease-out;
+  }
+
+
+  /* Стили для формы регистрации */
+
+.container .alert-light {
+  border-color: #bfbfbf;
+  text-align: start;
+}
+
+.user_images {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: 15px;
+  margin-left: 20px;
+}
+
+.form-register, .profile {
+  padding: 20px;
+  background: #eaeaea;
+  border: 1px solid #0DCAF0;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.form-register.delete {
+  padding: 20px;
+  background: #fff;
+  border: 0px solid #0DCAF0;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.profile {
+  text-align: start;
+}
+
+.profile form {
+  border: 1px solid #E38F97;
+  box-shadow: 0px 0px 1px 3px #E38F9740;
+}
+
+.form-register > p {
+  text-align: start;
+  font-weight: bold;
+}
+
+.form-register > p:last-child {
+  text-align: center;
+  font-weight: normal;
+}
+
+.form-register > p > span {
+  text-align: start;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.form-register .helptext {color: #b7b7b7}
+
+.form-register ul.errorlist {
+  color: #ca5858;
+  list-style-type: none;
+  text-align: start;
+  padding: 0px;
+  font-style: italic;
+  margin-bottom: 0px;
+}
+
+.auth input,
+.form-register p input,
+.form-register p textarea {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  border: 1px solid silver;
+  border-radius: 5px;
+  padding: 2%;
+}
+
+.auth input:focus,
+.create input:focus,
+.create textarea:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0px 0px 1px 3px rgba(44, 140, 214, 0.4);
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out
+}
+
+.auth ul {
+  text-align: start;
+}
+
+
+.form-register button {
+  min-width: 120px;
+}
+
+.hbutt {
+  width: 120px;
+}
+
+.change p label {
+  margin-right: 10px;
+}
+
+@media(min-width: 768px) {
+  .bord {
+    border-left: 1px solid #FFC107;
+    padding-left: 15px;
+  }
+}
+
+@media(max-width: 520px) {
+  .form-register a {
+    display: block;
+  }
+}

@@ -1,0 +1,34 @@
+{% extends 'home/base.html' %} 
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block topic %}
+<h1 class="pt-4 fw-semybold text-dark fs-1 pb-2 align-self-center home">
+        {{ topic }}
+    </h1>
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="alert alert-light">
+            <h1>{{ object.title }}</h1>
+            <p>{{ object.text|safe }}</p>
+            <div class="row row-cols-auto">
+                <div>
+                  <img src="{{ object.avtor.profile.img.url }}" alt="{{ object.avtor }}" class="user_images">
+                </div>
+                <div class="mt-2">
+                  <span class="text-muted">Публикация: {{ object.date|date:"d E Y в H:i" }}</span>
+                  <p><b>Автор:</b> <mark>{{ object.avtor }}</mark></p>
+                </div>
+            </div>
+            {% if object.avtor == user %}
+            <hr>
+            <a href="{% url 'news-update' object.id %}" class="btn btn-info">Обновить статью</a>
+            <a href="{% url 'news-delete' object.id %}" class="btn btn-danger">Удалить статью</a>
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock %}
