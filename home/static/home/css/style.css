@@ -118,8 +118,6 @@ footer {
   display: block;
   width: 100%;
   margin-top: 5px;
-  border: 1px solid silver;
-  border-radius: 5px;
   padding: 2%;
 }
 
@@ -149,6 +147,15 @@ footer {
 
 .change p label {
   margin-right: 10px;
+}
+
+.form-register label[for=id_agreement] {
+  width: 90%;
+}
+
+.form-register input[type=checkbox] {
+  width: 15px;
+  display: inline
 }
 
 @media(min-width: 768px) {
