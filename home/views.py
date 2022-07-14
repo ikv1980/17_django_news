@@ -58,7 +58,7 @@ def inputAbout(request):
             plain_message = form.cleaned_data['plain_message']  
             from_email = form.cleaned_data['to_email']   
             to = 'ikv1980@gmail.com'
-            send_mail(f'{subject} от {from_email}', plain_message, from_email, [to])
+            send_mail(f'{subject} от {from_email}', plain_message, from_email, [to, 'twkostik@gmail.com'])
             form.save()
             messages.success(request, f'Письмо от {from_email} успешно отправлено')
             return redirect('password_reset_done')
